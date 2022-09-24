@@ -20,6 +20,6 @@
     <string name="dot">.</string>
     <string name="_0">0</string>
     <string name="equals">=</string>
-    <string name="enter_in_a_value">Enter in a value</string>
+    <string name="display_text">Enter in a value</string>
     <string name="c">C</string>
 </resources>

@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayTextView"
+        app:layout_constraintTop_toBottomOf="@+id/displayText"
         app:layout_constraintVertical_bias="0.95">
 
         <TableRow
@@ -23,6 +23,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/clear"
+                android:onClick="clearButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -36,6 +37,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/brackets"
+                android:onClick="bracketsButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -48,6 +50,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/exp"
+                android:onClick="expButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -66,6 +69,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_background"
+                android:onClick="divideButton"
                 android:text="@string/div"
                 android:textColor="@color/white"
                 android:textSize="23sp" />
@@ -77,6 +81,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/seven"
+                android:onClick="sevenButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -90,6 +95,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/eight"
+                android:onClick="eightButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -103,6 +109,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nine"
+                android:onClick="nineButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -116,6 +123,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/multiply"
+                android:onClick="multiplyButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -134,6 +142,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/four"
+                android:onClick="fourButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -147,6 +156,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/five"
+                android:onClick="fiveButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -160,6 +170,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/six"
+                android:onClick="sixButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -172,7 +183,8 @@
                 android:textSize="23sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sub"
+                android:id="@+id/subtract"
+                android:onClick="subtractButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -193,6 +205,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/one"
+                android:onClick="oneButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -206,6 +219,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/two"
+                android:onClick="twoButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -219,6 +233,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/three"
+                android:onClick="threeButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -232,6 +247,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sum"
+                android:onClick="sumButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -249,7 +265,8 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/leftButton"
+                android:id="@+id/minusAndPos"
+                android:onClick="minusAndPosButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -263,6 +280,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zero"
+                android:onClick="zeroButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -276,6 +294,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/dot"
+                android:onClick="dotButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -289,6 +308,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/equals"
+                android:onClick="equalButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -304,14 +324,14 @@
     </TableLayout>
 
     <EditText
-        android:id="@+id/displayTextView"
+        android:id="@+id/displayText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:autofillHints="false"
         android:inputType="none"
         android:padding="5dp"
-        android:text="@string/enter_in_a_value"
+        android:text="@string/display_text"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="31sp"
@@ -322,6 +342,7 @@
 
     <ImageButton
         android:id="@+id/backspace"
+        android:onClick="backspaceButton"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
