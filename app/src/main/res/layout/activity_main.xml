@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/displayText"
-        app:layout_constraintVertical_bias="0.95">
+        app:layout_constraintVertical_bias="0.93">
 
         <TableRow
             android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:id="@+id/multiply"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_background"
@@ -334,17 +334,17 @@
 
     <EditText
         android:id="@+id/displayText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="392dp"
+        android:layout_height="122dp"
         android:layout_marginHorizontal="11dp"
-        android:layout_marginTop="21dp"
         android:autofillHints="false"
         android:inputType="none"
         android:padding="5dp"
         android:text="@string/display_text"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
-        android:textSize="31sp"
+        android:textSize="33sp"
+        app:layout_constraintBottom_toTopOf="@+id/backspace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -357,6 +357,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/button_background"
+        android:backgroundTint="@color/black"
         android:contentDescription="@string/backspace"
         android:onClick="backspaceButton"
         android:textColor="@color/black"
@@ -364,5 +365,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_cancel" />
+        app:srcCompat="@drawable/backspace" />
 </androidx.constraintlayout.widget.ConstraintLayout>
