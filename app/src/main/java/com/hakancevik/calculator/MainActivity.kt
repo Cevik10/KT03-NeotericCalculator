@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.view.View
 import com.hakancevik.calculator.databinding.ActivityMainBinding
+import org.mariuszgromada.math.mxparser.Expression
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var selection: SpannableStringBuilder
+    private lateinit var exp: Expression
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -114,7 +116,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     fun minusAndPosButton(view: View) {
         updateText("-")
 
@@ -137,19 +138,22 @@ class MainActivity : AppCompatActivity() {
         var closedBracket = 0
         var textLen = binding.displayText.text.length
 
-        for (i in 0 until cursorPos){
-           if (binding.displayText.text.toString().substring(i,i+1,).equals("(")){
-               openBracket +=1
-           }
-            if (binding.displayText.text.toString().substring(i,i+1,).equals(")")){
-                closedBracket +=1
+        for (i in 0 until cursorPos) {
+            if (binding.displayText.text.toString().substring(i, i + 1).equals("(")) {
+                openBracket += 1
+            }
+            if (binding.displayText.text.toString().substring(i, i + 1).equals(")")) {
+                closedBracket += 1
             }
         }
 
-        if (openBracket == closedBracket || binding.displayText.text.toString().substring(textLen-1,textLen).equals("(")){
+        if (openBracket == closedBracket || binding.displayText.text.toString()
+                .substring(textLen - 1, textLen).equals("(")
+        ) {
             updateText("(")
-        }
-        else if (closedBracket < openBracket && !binding.displayText.text.toString().substring(textLen-1,textLen).equals("(")){
+        } else if (closedBracket < openBracket && !binding.displayText.text.toString()
+                .substring(textLen - 1, textLen).equals("(")
+        ) {
             updateText(")")
         }
         binding.displayText.setSelection(cursorPos + 1)
@@ -166,7 +170,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun multiplyButton(view: View) {
-        updateText("x ")
+        updateText("×")
     }
 
     fun subtractButton(view: View) {
@@ -180,9 +184,19 @@ class MainActivity : AppCompatActivity() {
     fun equalButton(view: View) {
 
 
+        var userExp = binding.displayText.text.toString()
+
+        userExp = userExp.replace("÷", "/")
+        userExp = userExp.replace("×", "*")
+
+        exp = Expression(userExp)
+
+        var result: String = exp.calculate().toString()
+        binding.displayText.setText(result)
+        binding.displayText.setSelection(result.length)
+
+
     }
-
-
 
 
 }
